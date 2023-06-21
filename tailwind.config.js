@@ -7,12 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      boxShadow: {
+        'nav-shadow': '0 10px 25px 0px rgba(0, 0, 0, 0.3)',
+        'google-btn-shadow': '0 0px 20px 5px rgba(0, 0, 0, 0.2) ',
+      },
+      colors: {
+        'brand-color': '#2196F3',
       },
     },
   },
   plugins: [],
-}
+};

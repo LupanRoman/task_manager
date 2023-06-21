@@ -26,9 +26,11 @@ function Home() {
                 Register
               </button>
             </Link>
-            <button className="px-8 py-3 bg-brand-color rounded-lg text-white font-bold">
-              Log in
-            </button>
+            <Link href={'/auth/logIn'}>
+              <button className="px-8 py-3 bg-brand-color rounded-lg text-white font-bold">
+                Log in
+              </button>
+            </Link>
           </div>
         </div>
       </div>

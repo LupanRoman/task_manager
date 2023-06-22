@@ -1,3 +1,6 @@
+'use client';
+
+import { AuthService } from '@/services/auth/authService';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
 import { FcGoogle } from 'react-icons/fc';
@@ -6,17 +9,27 @@ type Props = {};
 function Home() {
   return (
     <>
-      <div className="px-7 flex flex-col pt-10 gap-8">
-        <div className="headline flex flex-col items-center text-center">
-          <h1 className="text-2xl leading-10">
+      <div className="px-7 flex flex-col pt-10 gap-8 md:gap-20">
+        <div className="headline flex flex-col items-center text-center md:flex-row md:w-full md:justify-between ">
+          <h1 className="text-2xl leading-10 md:pl-20 md:text-4xl md:leading-loose">
             Make your workflow
             <br />
             <span className="font-bold">Flawless</span>
           </h1>
-          <img src="/mainImg.jpg" alt="" className="max-h-80" />
+          <img
+            src="/mainImg.jpg"
+            alt=""
+            className="max-h-80 md:pr-20"
+            placeholder="blur"
+          />
         </div>
         <div className="auth-buttons flex flex-col items-center gap-9">
-          <button className="flex items-center gap-4 py-4 px-5 text-xs font-bold shadow-google-btn-shadow rounded-lg">
+          <button
+            className="flex items-center gap-4 py-4 px-5 text-xs font-bold shadow-google-btn-shadow rounded-lg"
+            onClick={() => {
+              AuthService.signInWithGoogle();
+            }}
+          >
             <FcGoogle className="text-2xl" />
             Sign up with google account
           </button>

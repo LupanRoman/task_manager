@@ -1,9 +1,11 @@
+'use client';
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth';
 import auth from '@/services/auth/firebase';
 
@@ -43,6 +45,16 @@ export const AuthService = {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
         const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+  signOutUser: async function () {
+    signOut(auth)
+      .then(() => {
+        console.log('out');
       })
       .catch((error) => {
         console.log(error);

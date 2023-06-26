@@ -10,13 +10,13 @@ function VerifyEmail({}: Props) {
         <div className="font-bold text-center flex flex-col gap-2 pt-20">
           <h1 className="text-3xl">Verify your email</h1>
           <p className="text-sm">
-            We've sent you an email verification link
+            We ve sent you an email verification link
             <br />
             on the email provided
           </p>
         </div>
         <div className="flex flex-col gap-5">
-          <Link href={'/auth/logIn'}>
+          <Link href={'/logIn'}>
             <button className="px-6 py-3 bg-brand-color rounded-lg text-white font-bold">
               Log in
             </button>
